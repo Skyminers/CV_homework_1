@@ -136,7 +136,12 @@ int main(int argc, char *argv[]) {
     VideoCapture capture = VideoCapture(videoPath);
     if(!capture.isOpened()){
         cerr << "Can not open " << path << "/1.mp4 .";
-        return 0;
+        capture = VideoCapture(path + "/1.avi");
+        if(!capture.isOpened()) {
+            cerr << "Can not open " << path << "/1.avi." << endl;
+            cerr << "Process will exit." << endl;
+            return 0;
+        }
     }
     int count = 0;
     while(true){
