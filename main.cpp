@@ -147,7 +147,7 @@ int main(int argc, char *argv[]) {
             count = 0;
             cout << "Solved 1 min." << endl;
         }
-        font->putText(image, STDID, Point(WIDTH/5, HEIGHT-30), 28, Scalar(255, 255, 255), -1,4,true);
+        font->putText(out, STDID, Point(WIDTH/5, HEIGHT-30), 28, Scalar(255, 255, 255), -1,4,true);
         video.write(out);
         video.write(out);
     }
